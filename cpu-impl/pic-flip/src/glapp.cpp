@@ -167,7 +167,6 @@ void GLApp::updateVoxels(void *positions, Array3f &data, int nrOfVoxels)
 	glBufferSubData(GL_ARRAY_BUFFER, 0, PosSize, positions);
 	glBufferSubData(GL_ARRAY_BUFFER, PosSize, FlagSize, data.data);
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
-	glVertexAttribPointer(_voxelShader->getAttributeId("isFluid"), 1, GL_FLOAT, GL_FALSE, 0, (GLvoid *)PosSize);
 }
 
 #pragma region setup
